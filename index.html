@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laptop Gallery</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #f0f2f5;
+      color: #333;
+    }
+
+    nav {
+      background-color: #007bff;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    nav .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    nav .nav-left h2 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    nav .nav-left a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    nav input[type="search"] {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 5px;
+      width: 250px;
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 20px 20px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.4rem;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      padding: 40px 30px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      width: 330px;
+      padding: 25px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .card h3 {
+      font-size: 1.5rem;
+      color: #007bff;
+      margin: 10px 0;
+    }
+
+    .card p {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    footer {
+      background-color: #343a40;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .gallery {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+      .btn {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 10px;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+    .highlight-section {
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .highlight-section h2 {
+      font-size: 2rem;
+      color: #343a40;
+    }
+
+    .highlight-section p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .floating-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 15px 20px;
+      border-radius: 50px;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      transition: background 0.3s ease;
+    }
+
+    .floating-btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-left">
+      <h2>Laptop Gallery</h2>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+    <input type="search" placeholder="Search laptops...">
+  </nav>
+
+  <header>
+    <h1>Welcome to Laptop Gallery</h1>
+    <p>Discover a handpicked selection of high-performance laptops, perfect for every need from work to entertainment.</p>
+  </header>
+
+  <section style="text-align: center; padding: 20px; background: #e9ecef;">
+    <h2>Why Choose Us?</h2>
+    <p style="max-width: 700px; margin: auto; font-size: 1.1rem;">
+      We curate the best laptops from top brands based on design, performance, and value for money. Whether you're a student, gamer, or professional, you'll find your next laptop here with ease and confidence.
+    </p>
+  </section>
+
+  <section style="text-align: center; padding: 40px 20px; background-color: #fff3cd;">
+    <h2>Customer Testimonials</h2>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; padding-top: 20px;">
+      <blockquote style="max-width: 300px; font-style: italic; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.05);">
+        "I found the perfect laptop for my work-from-home needs. The gallery made it super easy to compare models."
+        <br><strong>- Rafiq, Dhaka</strong>
+      </blockquote>
+      <blockquote style="max-width: 300px; font-style: italic; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.05);">
+        "Great layout and very informative descriptions. Helped me pick the right device for university."
+        <br><strong>- Nusrat, Chittagong</strong>
+      </blockquote>
+    </div>
+  </section>
+
+  <div class="gallery">
+    <!-- MacBook Air M2 -->
+    <div class="card">
+      <img src="data:image/jpeg;base64,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" alt="MacBook Air M2">
+      <h3>MacBook Air M2</h3>
+      <p><strong>Price:</strong> $1,199</p>
+      <p><strong>Release:</strong> July 2022</p>
+      <p><strong>Description:</strong> Lightweight and powerful, the MacBook Air M2 is ideal for students and professionals seeking performance and portability.</p>
+    </div>
+
+    <!-- Dell XPS 13 -->
+    <div class="card">
+      <img src="data:image/jpeg;base64,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" alt="Dell XPS 13">
+      <h3>Dell XPS 13</h3>
+      <p><strong>Price:</strong> $999</p>
+      <p><strong>Release:</strong> October 2021</p>
+      <p><strong>Description:</strong> Compact and premium, the Dell XPS 13 offers excellent display quality and long battery life in a sleek design.</p>
+    </div>
+
+    <!-- HP Pavilion x360 -->
+    <div class="card">
+      <img src="data:image/jpeg;base64,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" alt="HP Pavilion x360">
+      <h3>HP Pavilion x360</h3>
+      <p><strong>Price:</strong> $649</p>
+      <p><strong>Release:</strong> May 2021</p>
+      <p><strong>Description:</strong> This convertible laptop is perfect for work and entertainment, offering flexibility and solid performance.</p>
+    </div>
+
+    <!-- Lenovo ThinkPad X1 Carbon -->
+    <div class="card">
+      <img src="data:image/jpeg;base64,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" alt="Lenovo ThinkPad X1 Carbon">
+      <h3>Lenovo ThinkPad X1 Carbon</h3>
+      <p><strong>Price:</strong> $1,499</p>
+      <p><strong>Release:</strong> August 2022</p>
+      <p><strong>Description:</strong> Known for its durability and enterprise features, the ThinkPad X1 Carbon is a business powerhouse with a lightweight build.</p>
+    </div>
+  </div>
+
+  <section class="highlight-section">
+    <h2>Need Help Choosing?</h2>
+    <p>Contact our laptop experts for personalized recommendations based on your needs and budget.</p>
+    <button class="btn" onclick="alert('Contact support at support@laptopgallery.com')">Contact Support</button>
+  </section>
+
+  <footer>
+    &copy; 2025 Laptop Gallery. All rights reserved.
+  </footer>
+  <button class="floating-btn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+    ↑ Top
+  </button>
+  <div style="position: fixed; top: 90px; right: 30px; width: 300px; background: white; padding: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-radius: 10px; z-index: 999;">
+    <h3 style="margin-top: 0; color: #007bff;">User Login</h3>
+    <form>
+      <input type="text" placeholder="Username" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;">
+      <input type="password" placeholder="Password" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;">
+      <button class="btn" type="submit" style="width: 100%;">Login</button>
+    </form>
+    <p style="margin-top: 10px; font-size: 0.9rem; text-align: center;">
+      Don't have an account? <a href="#" style="color: #007bff; text-decoration: none;">Sign up</a>
+    </p>
+  </div>
+</body>
+</html>
